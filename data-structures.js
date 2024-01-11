@@ -61,27 +61,37 @@ const userExample = {
   id: 42,
   name: 'roger',
   age: 482,
+  favoriteRestaurant: {
+    name: "jerry's pizzeria",
+    address: '123 jerry boulevard',
+  },
 };
 
-console.log('user', userExample);
+console.log('userExample', userExample);
 
 // Access property in object
-console.log('user.name', userExample.name); // dot notation
-console.log('user.name', userExample['name']); // square brackets notation
+console.log('userExample.name', userExample.name); // dot notation
+console.log('userExample.name', userExample['name']); // square brackets notation
+
+// Access property in nested object
+console.log(
+  'userExample.favoriteRestaurant.address',
+  userExample.favoriteRestaurant.address,
+);
 
 // Access dynamic key in object
 let key = 'age';
-console.log('user[key] (age)', userExample[key]);
+console.log('userExample[key] (age)', userExample[key]);
 key = 'id';
-console.log('user[key] (id)', userExample[key]);
+console.log('userExample[key] (id)', userExample[key]);
 
 // Reassigning object property ("mutating")
 userExample.age = 483;
-console.log('user.age reassigned', userExample.age);
+console.log('userExample.age reassigned', userExample.age);
 
 // Add new property to object
 userExample.city = 'Vienna';
-console.log('user with new city property', userExample);
+console.log('userExample with new city property', userExample);
 
 // == Array ==
 const numbers = [1, 2, 3]; // array of numbers
