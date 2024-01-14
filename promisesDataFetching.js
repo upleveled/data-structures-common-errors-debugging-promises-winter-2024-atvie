@@ -1,4 +1,4 @@
-import { fakeFetch } from './util/fake-fetch.js';
+import { fakeFetch } from './util/fake-etch.js';
 
 // Create an array with 2 elements the array will be in the correct order
 const responses = [];
